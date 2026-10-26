@@ -1076,7 +1076,7 @@ a:hover {
    align-items: center;
    font-size :15px;
     margin:0;
-    text-align:left;
+    text-align:center;
     line-height: 1.7;
     overflow-wrap:break-word ;
  }
@@ -1092,6 +1092,7 @@ a:hover {
    margin:0;
    flex-shrink:0;
    white-space: nowrap;
+     padding-top:50px;
  }
  /* .upper span {
     color:#372d37;
@@ -1104,7 +1105,7 @@ a:hover {
  } */
  .line {
     display:flex;
-    max-width: 100%;
+    max-width: 90%;
     align-items:center;
     margin-top:20px;
     box-sizing: border-box;
