@@ -645,7 +645,7 @@ a:hover {
    margin:0;
 }
 /* MOBILE RESPONSIVE-600px */
-@media screen and (max-width:600px) {
+ @media screen and (max-width:600px) {
    /* SIDE-NAV */
 .side-nav {
   position: fixed;
@@ -730,23 +730,39 @@ a:hover {
 }
 /* Navbar */
 .navbar {
-    height: auto;
+   width: 100%;
+   display: flex;
+    height: 50px;
     min-height:45px;
-    padding:10px 15px;
-    gap:10px;
+    padding:8px 6px;
+    gap:5px;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
+    align-items: center;
     position:relative;
     background-color: rgba(0, 0, 0, 0.803);
+    box-sizing: border-box;
 }
 .nav-logo {
-    display:none;
+   flex-shrink: 0;
+}
+.navbar a {
+   font-size: 8px;
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   gap: 8px;
+   margin: 0;
+   padding: 0;
+    white-space: nowrap;
+   flex-shrink: 1;
 }
 .logo {
     margin:0;
+    flex-shrink:0;
 }
 .logo img {
-   width:100px;
+   width:55px;
    height:auto;
 }
 .navbar a {
@@ -764,19 +780,22 @@ a:hover {
 }
 .cart-icon {
     color:blueviolet;
-    font-size: 16px;
+    font-size: 12px;
+    flex-shrink: 0;
 }
 .btn {
     
     background-color:#7d1eff;
     color:white;
     border:none;
-    padding:10px 15px;
-    font-size: 10px;
+    padding:8px 7px;
+    font-size: 8px;
     font-weight:700;
     border-radius:50px;
     cursor:pointer;
     transition:all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 .btn i{
     margin-left:8px;
@@ -793,7 +812,7 @@ a:hover {
     height:auto;
     min-height:0;
     gap:30px;
-}
+   }
 .hero-img {
     margin:0;
     width:100%;
@@ -801,7 +820,7 @@ a:hover {
 .hero-img img {
     width:100%;
     max-width:320px;
-    height:auto;
+    height:330px;
 }
 .hero-msg{
     margin:0;
@@ -987,11 +1006,21 @@ a:hover {
  /* Best-section */
  .best-section { 
    flex-direction: column;
-    padding: 60px 20px;
-    gap:40px;
+   width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+    padding: 40px 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    
  }
  .best-left {
     width:100%;
+    min-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
  }
  .top-small {
    text-align: center;
@@ -1012,14 +1041,19 @@ a:hover {
  .feature-box {
     width:100%;
     margin-top:30px;
-    display: block;
+    /* display: block; */
+    box-sizing: border-box;
+    margin: 0 0 35px;
+    overflow-wrap: break-word;
  }
  .feature-box h4 {
    text-align: center;
+   max-width: 100%;
     font-size:16px;
     color:#372d37;
     font-weight: 700;
     margin-bottom:15px ;
+    overflow-wrap: break-word;
  }
  .feature-box p {
     font-size: 16px;
@@ -1028,30 +1062,36 @@ a:hover {
     line-height:28px;
  }
  .upper {
-   margin-left: 100px;
+   width: 100%;
     display:flex;
     justify-content: space-between;
     align-items:flex-start;
     gap:10px;
+    box-sizing: border-box;
  }
  .upper p {
+   flex: 1;
+   min-width: 0;
    justify-content: center;
    align-items: center;
-   font-size:13px;
+   font-size :15px;
     margin:0;
     text-align:left;
-    line-height: 22px;
+    line-height: 1.7;
+    overflow-wrap:break-word ;
  }
   .upper p br {
    display:none; 
  }
  .upper span {
    color:#372d37;
-   /* position:relative; */
+ position:static; 
+   font-size: 18px;
    right:100px;
    top:-5px;
    margin:0;
    flex-shrink:0;
+   white-space: nowrap;
  }
  /* .upper span {
     color:#372d37;
@@ -1064,19 +1104,25 @@ a:hover {
  } */
  .line {
     display:flex;
+    max-width: 100%;
     align-items:center;
-    margin-top:15px;
+    margin-top:20px;
+    box-sizing: border-box;
  }
  .line-bg {
-    width:400px;
+    width:100%;
+    max-width: 100%;
     height:1px;
     background:#e6e2f0;
     border-radius: 10px;
+    box-sizing: border-box;
  }
  .blue-line {
     height:4px;
+    max-width: 100%;
     background:#7d1eff;
     border-radius:10px;
+    box-sizing: border-box;
  }
  /* .line-span {
     font-size:40px;
@@ -1086,8 +1132,11 @@ a:hover {
      */
      .best-section .right-side {
       width:100%;
+      max-height: 100%;
+      margin: 2px auto 0;
       flex:auto;
       padding:0;
+      box-sizing: border-box;
      }
  
  .right-side img{
@@ -1308,6 +1357,6 @@ a:hover {
 .footer-cr p {
    font-size: 13px;
 }
-}
+} 
 
 
