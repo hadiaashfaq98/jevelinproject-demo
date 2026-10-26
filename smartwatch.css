@@ -1048,7 +1048,7 @@ a:hover {
  .upper span {
    color:#372d37;
    position:relative;
-   left:-80px;
+   right:100px;
    top:-5px;
    margin:0;
    flex-shrink:0;
